@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Example for getUser</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+    <div>name : <span id="data1"></span></div>
+    <div>email : <span id="data2"></span></div>
+    <div>phone : <span id="data3"></span></div>
+    <div>about : <span id="data4"></span></div>
+    <div>avatar : <span id="data5"></span></div>
+    <div>firstVisit : <span id="data6"></span></div>
+    <div>pageView : <span id="data7"></span></div>
+    <div>location : <span id="data8"></span></div>
+    <div>browser : <span id="data9"></span></div>
+    <div>os : <span id="data10"></span></div>
+
+
+    <!--- Put your Widget Code here from https://www.goftino.com/app/widget --->
+    <script type="text/javascript">
+        !function(){var g=document.createElement("script"),s="https://www.goftino.com/widget/XXX",e=document.getElementsByTagName("script")[0];g.type="text/javascript";g.async=!0;g.src=localStorage.getItem("goftino")?s+"?o="+localStorage.getItem("goftino"):s;e.parentNode.insertBefore(g,e);}();
+    </script>
+
+
+    <!--- Add this lines to set User's Data --->
+    <script>
+        window.addEventListener('goftino_ready', function () {
+            Goftino.getUser(function(data){
+                if(data.status ==='success'){
+                    document.getElementById('data1').innerHTML=data.name;
+                    document.getElementById('data2').innerHTML=data.email;
+                    document.getElementById('data3').innerHTML=data.phone;
+                    document.getElementById('data4').innerHTML=data.about;
+                    document.getElementById('data5').innerHTML=data.avatar;
+                    document.getElementById('data6').innerHTML=data.firstVisit;
+                    document.getElementById('data7').innerHTML=data.pageView;
+                    document.getElementById('data8').innerHTML=data.location;
+                    document.getElementById('data9').innerHTML=data.browser;
+                    document.getElementById('data10').innerHTML=data.os;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
