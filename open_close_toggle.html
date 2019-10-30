@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Example for open/close/toggle</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        body{font-family: Arial Tahoma;margin: 20px;font-size: 18px;line-height: 40px}
+        #open_chat,#close_chat,#toggle_chat{cursor: pointer}
+    </style>
+</head>
+<body>
+
+    <!--- Your Button --->
+    <div id="open_chat">Open Chat Widget</div>
+    <div id="close_chat">Close Chat Widget</div>
+    <br>
+    <img id="toggle_chat" src="https://goftino.com/static/assets/img/sample.jpg" alt="chat" />
+
+
+    <!--- Put your Widget Code here from https://www.goftino.com/app/widget --->
+    <script type="text/javascript">
+        !function(){var g=document.createElement("script"),s="https://www.goftino.com/widget/XXX",e=document.getElementsByTagName("script")[0];g.type="text/javascript";g.async=!0;g.src=localStorage.getItem("goftino")?s+"?o="+localStorage.getItem("goftino"):s;e.parentNode.insertBefore(g,e);}();
+    </script>
+
+
+    <!--- Add this lines to open/close/toggle widget --->
+    <script>
+        window.addEventListener('goftino_ready', function () {
+            document.getElementById("open_chat").addEventListener("click", function () {
+                Goftino.open();
+            });
+            document.getElementById("close_chat").addEventListener("click", function () {
+                Goftino.close();
+            });
+            document.getElementById("toggle_chat").addEventListener("click", function () {
+                Goftino.toggle();
+            });
+        });
+    </script>
+
+</body>
+</html>
