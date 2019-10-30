@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Example for setUser</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+    <!--- Put your Widget Code here from https://www.goftino.com/app/widget --->
+    <script type="text/javascript">
+        !function(){var g=document.createElement("script"),s="https://www.goftino.com/widget/XXX",e=document.getElementsByTagName("script")[0];g.type="text/javascript";g.async=!0;g.src=localStorage.getItem("goftino")?s+"?o="+localStorage.getItem("goftino"):s;e.parentNode.insertBefore(g,e);}();
+    </script>
+
+
+    <!--- Add this lines to set User's Data --->
+    <script>
+        window.addEventListener('goftino_ready', function () {
+            Goftino.setUser({
+                email: 'test@email.com',
+                name: 'Ali Rahimi',
+                phone: '09123456789',
+                forceUpdate : true
+            });
+        });
+    </script>
+
+</body>
+</html>
