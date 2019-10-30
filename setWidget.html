@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Example for setWidget</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        body{font-family: Arial Tahoma;margin: 20px}
+        #new_widget_button{background:#fdd77b;border-radius: 50px;padding: 3px 30px;font-size: 14px;position: relative;color: black;font-size: 18px;display: inline-block;cursor: pointer}
+        #unread_counter{background: #b00000;border-radius: 50px;padding: 3px;font-size: 14px;position: absolute;color:white;min-width: 18px;height: 18px;top:-5px;right:0;z-index: 5;text-align: center;font-weight: bold}
+    </style>
+</head>
+<body>
+
+    <!--- Your New Widget Button --->
+    <div id="new_widget_button">Chat with ME<span id="unread_counter">5</span></div>
+
+
+    <!--- Put your Widget Code here from https://www.goftino.com/app/widget --->
+    <script type="text/javascript">
+        !function(){var g=document.createElement("script"),s="https://www.goftino.com/widget/XXX",e=document.getElementsByTagName("script")[0];g.type="text/javascript";g.async=!0;g.src=localStorage.getItem("goftino")?s+"?o="+localStorage.getItem("goftino"):s;e.parentNode.insertBefore(g,e);}();
+    </script>
+
+
+    <!--- Add this lines for Widget customization --->
+    <script>
+        window.addEventListener('goftino_ready', function () {
+            Goftino.setWidget({
+                icon: false,
+                counter: '#unread_counter'
+            });
+
+            document.getElementById("new_widget_button").addEventListener("click", function () {
+                Goftino.toggle();
+            });
+        });
+    </script>
+
+</body>
+</html>
