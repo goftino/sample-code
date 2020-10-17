@@ -23,3 +23,19 @@
 
 
 </div>
+
+<div dir='rtl'>
+<p>
+با استفاده از دریافت رویداد هااز ابزارک گفتینو ، می توانید اطلاعات از آن دریافت کنید.
+</p>
+  <p>
+مثال هایی برای راهنمایی بیشتر در رویداد های زیر ارائه شده است:
+</p>
+  </div>
+<div dir='ltr'>
+  
+[goftino_sendMessage/goftino_getMessage](events.html)
+
+[goftino_openWidget/goftino_closeWidget/goftino_ready](events.html)
+
+</div>
