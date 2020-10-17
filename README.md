@@ -19,7 +19,7 @@
 [getUser](getUser.html)
 
 
-[open/close/toggle](open_close_toggle.html)
+[open / close / toggle](open_close_toggle.html)
 
 
 </div>
@@ -34,8 +34,8 @@
   </div>
 <div dir='ltr'>
   
-[goftino_sendMessage/goftino_getMessage](events.html)
+[goftino_sendMessage / goftino_getMessage](events.html)
 
-[goftino_openWidget/goftino_closeWidget/goftino_ready](events.html)
+[goftino_openWidget / goftino_closeWidget / goftino_ready](events.html)
 
 </div>
