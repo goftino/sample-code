@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Example for setWidget</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -26,10 +25,10 @@
 
     <!--- Add this for Widget customization --->
     <script>
-        window.addEventListener('goftino_ready', function () {
+        window.addEventListener("goftino_ready", function () {
             Goftino.setWidget({
-                icon: false,
-                counter: '#unread_counter'
+                hasIcon: false,
+                counter: "#unread_counter"
             });
 
             document.getElementById("new_widget_button").addEventListener("click", function () {
