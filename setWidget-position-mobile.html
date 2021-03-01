@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Example for setWidget - change position</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+    <!--- Put your Widget Code here from https://www.goftino.com/app/widget --->
+    <script type="text/javascript">
+        !function(){var a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/XXX",l=localStorage.getItem("goftino");g.type="text/javascript",g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
+    </script>
+
+
+    <!--- Add lines below for change widget position in Mobile --->
+    <script>
+        if(window.innerWidth<769){
+            window.addEventListener('goftino_ready', function () {
+                Goftino.setWidget({
+                    marginRight: 20,
+                    marginBottom: 40
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
