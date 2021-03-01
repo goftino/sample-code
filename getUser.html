@@ -19,29 +19,34 @@
     <div>location : <span id="data8"></span></div>
     <div>browser : <span id="data9"></span></div>
     <div>os : <span id="data10"></span></div>
+    <div>user has chat : <span id="data11"></span></div>
+    <div>tags : <span id="data12"></span></div>
 
 
     <!--- Put your Widget Code here from https://www.goftino.com/app/widget --->
     <script type="text/javascript">
-        !function(){var g=document.createElement("script"),s="https://www.goftino.com/widget/XXX",e=document.getElementsByTagName("script")[0];g.type="text/javascript";g.async=!0;g.src=localStorage.getItem("goftino")?s+"?o="+localStorage.getItem("goftino"):s;e.parentNode.insertBefore(g,e);}();
+            !function(){var a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/XXX",l=localStorage.getItem("goftino");g.type="text/javascript",g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
     </script>
 
 
-    <!--- Add this to set User's Data --->
+    <!--- Add lines below to get User's Data --->
     <script>
         window.addEventListener('goftino_ready', function () {
             Goftino.getUser(function(data){
                 if(data.status ==='success'){
-                    document.getElementById('data1').innerHTML=data.name;
-                    document.getElementById('data2').innerHTML=data.email;
-                    document.getElementById('data3').innerHTML=data.phone;
-                    document.getElementById('data4').innerHTML=data.about;
-                    document.getElementById('data5').innerHTML=data.avatar;
-                    document.getElementById('data6').innerHTML=data.firstVisit;
-                    document.getElementById('data7').innerHTML=data.pageView;
-                    document.getElementById('data8').innerHTML=data.location;
-                    document.getElementById('data9').innerHTML=data.browser;
-                    document.getElementById('data10').innerHTML=data.os;
+                    document.getElementById('data1').innerHTML = data.name;
+                    document.getElementById('data2').innerHTML = data.email;
+                    document.getElementById('data3').innerHTML = data.phone;
+                    document.getElementById('data4').innerHTML = data.about;
+                    document.getElementById('data5').innerHTML = data.avatar;
+                    document.getElementById('data6').innerHTML = data.firstVisit;
+                    document.getElementById('data7').innerHTML = data.pageView;
+                    document.getElementById('data8').innerHTML = data.location;
+                    document.getElementById('data9').innerHTML = data.browser;
+                    document.getElementById('data9').innerHTML = data.browser;
+                    document.getElementById('data10').innerHTML = data.os;
+                    document.getElementById('data11').innerHTML = data.hasChat;
+                    document.getElementById('data12').innerHTML = data.tags;
                 }
             });
         });
