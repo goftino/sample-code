@@ -34,6 +34,15 @@
 دریافت اطلاعات کاربر از گفتینو
 
 
+[getUserId](getUserId.html)
+<br>
+دریافت شناسه یکتای کاربر در گفتینو
+
+[setUserId](setUserId.html)
+<br>
+اعمال شناسه یکتای کاربر در ابزارک
+
+
 [open / close / toggle](open_close_toggle.html)
 <br>
 باز و بستن ابزارک گفتگو
