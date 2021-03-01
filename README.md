@@ -9,6 +9,7 @@
 </p>
   </div>
 <div dir='ltr'>
+  
 ایجاد دکمه مجزا برای ابزارک
 [setWidget](setWidget.html)
   
