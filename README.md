@@ -11,25 +11,31 @@
 <div dir='ltr'>
   
 [setWidget](setWidget.html)
+<br>
 ایجاد دکمه مجزا برای ابزارک
 
 
 [setWidget](setWidget-position.html)
+<br>
 تغییر جایگاه ابزارک
 
 [setWidget](setWidget-position-mobile.html)
+<br>
 تغییر جایگاه ابزارک در موبایل
 
 
 [setUser](setUser.html)
+<br>
 ارسال اطلاعات کاربر به گفتینو
 
 
 [getUser](getUser.html)
+<br>
 دریافت اطلاعات کاربر از گفتینو
 
 
 [open / close / toggle](open_close_toggle.html)
+<br>
 باز و بستن ابزارک گفتگو
 
 
