@@ -11,11 +11,11 @@
 
     <!--- Put your Widget Code here from https://www.goftino.com/app/widget --->
     <script type="text/javascript">
-        !function(){var g=document.createElement("script"),s="https://www.goftino.com/widget/XXX",e=document.getElementsByTagName("script")[0];g.type="text/javascript";g.async=!0;g.src=localStorage.getItem("goftino")?s+"?o="+localStorage.getItem("goftino"):s;e.parentNode.insertBefore(g,e);}();
+        !function(){var a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/XXX",l=localStorage.getItem("goftino");g.type="text/javascript",g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
     </script>
 
 
-    <!--- Add this to set User's Data --->
+    <!--- Add lines below to set User's Data --->
     <script>
         window.addEventListener('goftino_ready', function () {
             Goftino.setUser({
