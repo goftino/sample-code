@@ -17,10 +17,10 @@
     <!--- Your New Widget Button --->
     <div id="new_widget_button">Chat with ME<span id="unread_counter">5</span></div>
 
-
-    <!--- Put your Widget Code here from https://www.goftino.com/app/widget --->
+    
+    <!--- Put your Widget Code here from https://www.goftino.com/app/?go=widget --->
     <script type="text/javascript">
-        !function(){var a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/XXX",l=localStorage.getItem("goftino");g.type="text/javascript",g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
+        !function(){var i="XXXXXX",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
     </script>
 
 
@@ -28,7 +28,7 @@
     <script>
         window.addEventListener('goftino_ready', function () {
             Goftino.setWidget({
-                icon: false,
+                hasIcon: false,
                 counter: '#unread_counter'
             });
 
