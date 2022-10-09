@@ -1,0 +1,10 @@
+  <script>
+        window.addEventListener('goftino_ready', function () {
+		     Goftino.setWidget({
+                hasIcon: false,
+            });	
+            document.getElementById("your-btn-id").addEventListener("click", function () {
+                Goftino.open();
+            });
+        });
+    </script>
