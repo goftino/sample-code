@@ -50,8 +50,8 @@
 
 </div>
 
-<br><br>
-
+<br>
+<hr>
 <div dir='rtl'>
 <p>
 با استفاده از دریافت رویدادها از ابزارک گفتینو ، می توانید اطلاعات از آن دریافت کنید.
@@ -65,5 +65,17 @@
 [goftino_sendMessage / goftino_getMessage](events.html)
 
 [goftino_openWidget / goftino_closeWidget / goftino_ready](events.html)
+
+</div>
+<br>
+<hr>
+<div dir='rtl'>
+<p>
+برای نمایش سریعتر ابزارک گفتینو به مخاطب، از این کد استفاده کنید (بطور پیش فرض ابزارک منتظر اتمام لود کامل صفحه سایت شما می ماند و سپس نمایش داده می شود)
+</p>
+  </div>
+<div dir='ltr'>
+
+[widget-quick-load](widget-quick-load.html)
 
 </div>
