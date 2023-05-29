@@ -79,3 +79,15 @@
 [widget-quick-load](widget-quick-load.html)
 
 </div>
+<br>
+<hr>
+<div dir='rtl'>
+<p>
+در صورت نیاز به افزودن پارامتر Content Security Policy در header صفحه سایت خود، ازین نمونه برای اجازه عملکرد فایل های ابزارک گفتینو استفاده کنید:
+</p>
+  </div>
+<div dir='ltr'>
+
+[Content Security Policy - header sample](csp-header-sample)
+
+</div>
