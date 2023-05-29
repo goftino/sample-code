@@ -1,0 +1,1 @@
+default-src 'self'; script-src 'self' *.goftino.com; style-src 'self' 'unsafe-inline' *.goftino.com; connect-src 'self' *.goftino.com; font-src 'self' data: *.goftino.com; img-src 'self' data: blob: *.goftino.com; media-src 'self' blob: *.goftino.com
