@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Online Chat by Goftino</title>
+    <style>
+      body {
+        margin: 0
+      }
+      .goftino_chat_page {
+        width: 100%;
+        height: 100%
+      }
+      .loader_spin {
+        border: 6px solid #eeeeee;
+        border-top: 6px solid #00bcd4;
+        border-radius: 50%;
+        margin: 45vh auto 0;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg)
+        }
+        100% {
+          transform: rotate(360deg)
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="goftino_chat_page">
+      <div class="loader_spin"></div>
+    </div>
+    <script type="text/javascript">
+      var goftino_id = "XXXXXX";     // NEED TO REPLACE IT WITH YOUR GOFTINO-ID
+
+      var url_query = {};
+      window.location.href.split(/\?(.*)?$/).slice(1).join("").split("&").forEach(function(i) {
+        var t = i.split("=");
+        url_query[t[0]] = t[1];
+      });
+      var g = document.createElement("script"),
+        s = "https://www.goftino.com/widget/" + goftino_id + "?page=1&",
+        l = localStorage.getItem("goftino_" + goftino_id);
+      if (url_query.userid && url_query.userid.length === 64) {
+        l = url_query.userid;
+        localStorage.setItem("goftino_" + goftino_id, l);
+      }
+      g.async = !0;
+      g.src = l ? s + "o=" + l : s;
+      if (url_query.op) {
+        g.src += "&assign=" + url_query.op;
+      }
+      document.getElementsByTagName("head")[0].appendChild(g);
+      window.addEventListener("goftino_ready", function() {
+        Goftino.open();
+        Goftino.setWidget({
+          icon: false
+        });
+        var gw = document.getElementById("goftino_w");
+        var gf = gw.contentWindow && gw.contentDocument;
+        var d = gf.getElementById("box-chat").style;
+        d.borderRadius = "0";
+        d.width = "100%";
+        d.height = "100%";
+        d.margin = "0";
+        if (window.innerWidth > 768) {
+          gf.getElementById("box-send").style.minHeight = "70px";
+        }
+        gf.getElementsByClassName("box-chat-content")[0].style.height = "calc(100vh + 8px)";
+        gf.getElementById("btn-close-chat").style.display = "none";
+      });
+    </script>
+  </body>
+</html>
